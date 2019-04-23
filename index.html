@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Arrivals</title>
+    <link rel="icon" href="https://static.thenounproject.com/png/4420-200.png">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+</head>
+
+<body>
+    <!-- Jumbotron Title -->
+    <div class="jumbotron bg-success w-75 p-3 text-white container">
+        <h1 class="text-center">Train Times</h1>
+        <h3 class="text-center">You're in America. Maybe one day...</h3>
+    </div>
+
+    <div class="w-75 container">
+        <div class="header bg-primary text-white">
+            Current Train Schedule
+        </div>
+        <table class="table  border border-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="w-75 container">
+        <div class="header bg-primary text-white">
+            Add Train
+        </div>
+        <form class="form-train border border-primary">
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="train-name" placeholder="ex. Thomas the Tank Engine">
+            </div>
+            <div class="form-group">
+                <label for="trainDestination">Train Destination</label>
+                <input type="text" class="form-control" id="train-destination" placeholder="ex. Paris">
+            </div>
+            <div class="form-group">
+                <label for="trainFirstTime">First Train Time</label>
+                <input type="time" class="form-control" id="train-first-time" placeholder="HH:MM (Military Time)">
+            </div>
+            <div class="form-group">
+                <label for="trainFrequency">Frequency</label>
+                <input type="number" class="form-control" id="train-frequency" placeholder="minutes">
+            </div>
+            <button type="submit" id="add-train" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
